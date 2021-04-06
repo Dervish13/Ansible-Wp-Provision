@@ -1,0 +1,18 @@
+packages:
+  - name: php
+  - name: libapache2-mod-php
+  - name: php-xmlrpc
+  - name: php-gd
+  - name: php-xml
+  - name: php-cli
+  - name: php-curl
+  - name: php-fpm
+  - name: php-json
+  - name: php-common
+  - name: php-mysql
+  - name: php-zip
+  - name: php-mbstring
+  - name: php-pear
+  - name: php-bcmath
+  - name: php-soap
+

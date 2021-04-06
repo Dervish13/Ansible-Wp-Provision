@@ -1,0 +1,20 @@
+---
+- name: Install Apache
+  become: yes
+  with_items: "{{ packages }}"
+  apt:
+    pkg: "{{ item.name }}"
+    state: latest
+
+- name: Start Apache
+  become: yes
+  service:
+    name: apache2
+    state: started
+
+- name: Enable Apache modules
+  become: yes
+  with_items: "{{ modules }}"
+  apache2_module:
+    state: present
+    name: "{{ item.name }}"

@@ -1,0 +1,7 @@
+packages:
+  - name: apache2
+    #  - name: python-apt
+
+modules:
+  - name: rewrite
+  - name: expires

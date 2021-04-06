@@ -1,0 +1,7 @@
+---
+- name: Wordpress provision
+  hosts: all
+  roles:
+    - apache2
+    - php
+    - mysql

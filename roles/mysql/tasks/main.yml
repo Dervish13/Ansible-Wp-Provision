@@ -1,0 +1,7 @@
+---
+- name: Install MySQL
+  become: yes
+  with_items: "{{ packages }}"
+  apt:
+    pkg: "{{ item.name }}"
+    state: latest

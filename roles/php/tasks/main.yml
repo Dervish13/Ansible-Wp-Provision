@@ -1,0 +1,12 @@
+---
+- name: Add Php repository
+  become: yes
+  apt_repository:
+    repo: ppa:ondrej/php
+    update_cache: yes
+- name: Install PHP
+  become: yes
+  with_items: "{{ packages }}"
+  apt:
+    pkg: "{{ item.name }}"
+    state: latest
